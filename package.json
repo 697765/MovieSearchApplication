@@ -1,0 +1,22 @@
+{
+  "name": "paketi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-generator": "^4.16.0",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.3.1",
+    "mime-types": "^2.1.21",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.9",
+    "pug": "^2.0.3"
+  }
+}

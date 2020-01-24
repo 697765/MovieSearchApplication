@@ -1,0 +1,125 @@
+html, body {
+		 margin: 0;
+		 min-height: 100%;
+		 margin: 0;
+	  }
+	  body {
+		  font-family: Avenir, Arial, sans-serif;
+		  color: #fff;
+		  background: #000;
+	  }
+	  header {
+		  background: #333;
+		  padding: 1rem;
+	  }
+	  h1 {
+		  font-weight: 100;
+	  }
+	  h1 span {
+		  font-size: 1rem;
+	  }
+
+		img{width: 100%}
+
+	  #movie {
+		  margin: 2rem auto;
+		  width: 90%;
+		  max-width: 45rem;
+		  display: grid;
+		  grid-template-columns: 1fr 2fr;
+		  grid-gap: 2rem;
+	  }
+	  #movie img {
+		  width: 100%;
+	  }
+	  .star {
+		  letter-spacing: .5rem;
+		  color: #ff0;
+	  }
+	  .nonrate {
+		  color: #444;
+	  }
+
+    button {
+      background: black;
+      color: white;
+      border-radius: 4px;
+      padding: 10px 20px 8px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      border: 1px solid #555;
+      cursor: pointer;
+    }
+
+    #unos
+    {
+      background: black;
+      color: white;
+      border-radius: 4px;
+      padding: 10px 20px 8px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      border: 1px solid #555;
+      cursor: pointer;
+    }
+
+    button:hover
+    {
+      background-color: grey;
+    }
+
+		#unos:hover
+    {
+      background-color: grey;
+    }
+
+    input
+    {
+			background: black;
+      color: white;
+      border-radius: 4px;
+      padding: 10px 20px 8px;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      border: 1px solid #555;
+      cursor: pointer;
+		}
+
+		#listazelja {
+		  /*margin: 2rem auto;*/
+			border: 1px solid #555;
+		  width: 50%;
+			height: 160px;
+		  max-width: 45rem;
+		  display: grid;/*stvaranje tablice s 2 stupca*/
+		  grid-template-columns: 50% 45%;/*sirina prvog i drugog stupca*/
+		  grid-gap: 5%; /*udaljenost izmedu stupaca */
+			overflow: scroll;
+	  }
+
+		#listazelja img {
+			margin: 5% 0% 0% 5%;
+		  width: 80%;
+			border: 1px solid #555;
+			height:auto;
+	  }
+
+		#opisfilma div{
+			margin-top: 5%;
+		}
+
+		@media all and (max-width: 500px) and (min-width: 300px)
+		{
+			#imeFilma{font-size: 200%;}
+			#unos{font-size: 200%;}
+			label{font-size: 200%;}
+			h2{font-size: 200%;}
+			button{font-size: 200%;}
+			p{font-size: 150%;}
+			#listazelja {
+				width: 90%;
+				font-size: 200%;
+			}
+		}

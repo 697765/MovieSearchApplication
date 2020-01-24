@@ -1,0 +1,62 @@
+doctype html
+html
+  head
+    script(src="api.js")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+    link(rel='stylesheet' type="text/css" href='css/Stil.css')
+  
+    title Filmovi :)
+  
+  body
+    h2=poruka 
+    img(src='/public/movie.jpg')
+    
+    label(for='imeFilma') Unesite ime filma:  
+    input#imeFilma(type='text', name='imeFilma', value='')
+    p#error
+    button#trazi(onclick='PosaljiAPI()') Pretraži
+    
+    form(action='/unosubazu', method='post')      
+      input#ime(type="hidden" name="ime" value=poruka.substr(12) )
+      input#json(type="hidden" name="json")
+      
+      div#movie 
+        img#slika(name='slika')
+        div#sadrzaj
+          h1
+            p#naslov(name='year')
+          p#genre(name='genre')
+          p#plot(name='plot')
+          b Rating:
+            span#imdbrating
+      br
+      input#unos(type='submit' value='Dodaj u listu želja' onclick='ProvjeriUnos()')
+      p#postojecifilm=postojecifilm
+    
+  
+    - var niz=nizfilmova
+    
+    div#listazelja
+      each film in niz
+        -var naslov
+        -var slika
+        -var zanr
+        each v,k in film
+          if k=='Title'
+            -naslov=v
+          else if k=='Genre'
+            -zanr=v
+          else if k=='Poster'
+            -slika=v
+          else if k=='imdbRating'
+            img#opisslika(src=slika)
+            div#opisfilma
+              div(style='text-decoration:underline')=naslov
+              div=zanr
+              div=v+"★"
+            
+          
+    
+  
+        
+    

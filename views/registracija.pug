@@ -1,0 +1,44 @@
+doctype html
+html
+  head
+    link(href='css/GlavniStil.css', rel='stylesheet')
+    title registracija
+  body
+    img(src='/public/movie.jpg')
+    if success
+      console.log('uspjesno')
+    else
+      if errors
+        ul
+          each v in errors
+            li= JSON.stringify(v.msg)
+      
+    form(action='/provjeraRegistracije', method='post')
+      table
+        tr
+          td
+            label(for='korisnickoIme') Unesite korisničko ime:
+          td
+            input#korisnickoIme(type='text', name='korisnickoime', value='')
+        tr
+          td
+            label(for='lozinka') Unesite lozinku:
+          td
+            input#lozinka(type='password', name='lozinka', value='')
+        tr
+          td
+            label(for='lozinkaponovljena') Ponovno unesite lozinku:
+          td
+            input#lozinkaponovljena(type='password', name='lozinkaponovljena', value='')
+        tr
+          td
+            label(for='mail') Unesite mail:
+          td
+            input#mail(type='email', name='mail', value='')
+      br
+      input#prijava(type='submit', name='', value='REGISTRIRAJTE SE')
+      br
+      a(href='/') prijava
+      br
+      p=poruka
+      
